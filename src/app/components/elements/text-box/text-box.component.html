@@ -1,26 +1,71 @@
-<div class="modal">
+<div class="modal" (click)="closeModalOnOutsideClick($event)">
   <div class="modal-content">
-    <span class="close-button" (click)="closeModal()">&times;</span>
-    <h2 class="text-2xl font-bold mb-4">Text Box</h2>
-    
-    <div class="mb-4">
-      <label for="fullName" class="block text-gray-700">Full Name</label>
-      <input id="fullName" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="fullName">
-    </div>
-    
-    <div class="mb-4">
-      <label for="email" class="block text-gray-700">Email</label>
-      <input id="email" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="email">
-    </div>
-    
-    <div class="mb-4">
-      <label for="currentAddress" class="block text-gray-700">Current Address</label>
-      <input id="currentAddress" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="currentAddress">
-    </div>
-    
-    <div class="mb-4">
-      <label for="permanentAddress" class="block text-gray-700">Permanent Address</label>
-      <input id="permanentAddress" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="permanentAddress">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <h2 class="text-2xl font-bold mb-4">Text Box</h2>
+
+      <div class="mb-4">
+        <label for="fullName" class="block text-gray-700">Full Name</label>
+        <input
+          id="fullName"
+          class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full"
+          type="text"
+          name="fullName"
+          id="fullName"
+          formControlName="fullName"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700">Email</label>
+        <input
+          id="email"
+          class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full"
+          type="text"
+          name="email"
+          formControlName="email"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="currentAddress" class="block text-gray-700"
+          >Current Address</label
+        >
+        <input
+          id="currentAddress"
+          class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full"
+          type="text"
+          name="currentAddress"
+          formControlName="currentAddress"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="permanentAddress" class="block text-gray-700"
+          >Permanent Address</label
+        >
+        <input
+          id="permanentAddress"
+          class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full"
+          type="text"
+          name="permanentAddress"
+          formControlName="permanentAddress"
+        />
+      </div>
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Submit
+      </button>
+    </form>
+
+    <div *ngIf="submittedData" class="mt-2 border p-10">
+      <h3 class="text-2xl font-bold mb-4">Submitted data</h3>
+      <p>Fullname: {{ submittedData.fullName }}</p>
+      <p>Email: {{ submittedData.email }}</p>
+      <p>Current Address: {{ submittedData.currentAddress }}</p>
+      <p>Permanent Address:{{ submittedData.permanentAddress }}</p>
     </div>
   </div>
 </div>

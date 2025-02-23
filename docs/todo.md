@@ -1,6 +1,6 @@
 Elements:
 
-- [ ] Create a functional Text Box
+- [x] Create a functional Text Box
 - [ ] Create a functional Check Box
 - [ ] Create a functional Radio Box
 - [ ] Create a functional Table Box
