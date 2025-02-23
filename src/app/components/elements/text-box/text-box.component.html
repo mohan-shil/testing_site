@@ -1,7 +1,26 @@
 <div class="modal">
   <div class="modal-content">
     <span class="close-button" (click)="closeModal()">&times;</span>
-    <h2>Text Box</h2>
-    <p>Content for Text Box modal...</p>
+    <h2 class="text-2xl font-bold mb-4">Text Box</h2>
+    
+    <div class="mb-4">
+      <label for="fullName" class="block text-gray-700">Full Name</label>
+      <input id="fullName" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="fullName">
+    </div>
+    
+    <div class="mb-4">
+      <label for="email" class="block text-gray-700">Email</label>
+      <input id="email" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="email">
+    </div>
+    
+    <div class="mb-4">
+      <label for="currentAddress" class="block text-gray-700">Current Address</label>
+      <input id="currentAddress" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="currentAddress">
+    </div>
+    
+    <div class="mb-4">
+      <label for="permanentAddress" class="block text-gray-700">Permanent Address</label>
+      <input id="permanentAddress" class="bg-amber-400 border border-gray-300 rounded py-2 px-4 w-full" type="text" name="permanentAddress">
+    </div>
   </div>
 </div>

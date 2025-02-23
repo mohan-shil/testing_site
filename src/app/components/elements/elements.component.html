@@ -1,37 +1,59 @@
-<div class="">
-  <div class="flex justify-center p-10 m-10">
+<div class="flex justify-center p-10 m-10">
+  <div>
     <ul>
-      <li><button (click)="openModal('textBox')">Text Box</button></li>
-      <li><button (click)="openModal('check-box')">Check Box</button></li>
-      <li><button (click)="openModal('radio-box')">Radio Box</button></li>
-      <li><button (click)="openModal('table-box')">Table Box</button></li>
-      <li><button (click)="openModal('buttons')">Buttons</button></li>
-      <li><button (click)="openModal('links')">Links</button></li>
+      <li>
+        <button class="underline" (click)="openModal('textBox')">
+          Text Box
+        </button>
+      </li>
+      <li>
+        <button class="underline" (click)="openModal('check-box')">
+          Check Box
+        </button>
+      </li>
+      <li>
+        <button class="underline" (click)="openModal('radio-box')">
+          Radio Box
+        </button>
+      </li>
+      <li>
+        <button class="underline" (click)="openModal('table-box')">
+          Table Box
+        </button>
+      </li>
+      <li>
+        <button class="underline" (click)="openModal('buttons')">
+          Buttons
+        </button>
+      </li>
+      <li>
+        <button class="underline" (click)="openModal('links')">Links</button>
+      </li>
     </ul>
   </div>
-</div>
 
-<app-text-box
-  *ngIf="activeModal === 'textBox'"
-  (close)="closeModal()"
-></app-text-box>
-<app-text-box
-  *ngIf="activeModal === 'check-box'"
-  (close)="closeModal()"
-></app-text-box>
-<app-text-box
-  *ngIf="activeModal === 'radio-box'"
-  (close)="closeModal()"
-></app-text-box>
-<app-text-box
-  *ngIf="activeModal === 'table-box'"
-  (close)="closeModal()"
-></app-text-box>
-<app-text-box
-  *ngIf="activeModal === 'buttons'"
-  (close)="closeModal()"
-></app-text-box>
-<app-text-box
-  *ngIf="activeModal === 'links'"
-  (close)="closeModal()"
-></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'textBox'"
+    (close)="closeModal()"
+  ></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'check-box'"
+    (close)="closeModal()"
+  ></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'radio-box'"
+    (close)="closeModal()"
+  ></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'table-box'"
+    (close)="closeModal()"
+  ></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'buttons'"
+    (close)="closeModal()"
+  ></app-text-box>
+  <app-text-box
+    *ngIf="activeModal === 'links'"
+    (close)="closeModal()"
+  ></app-text-box>
+</div>
