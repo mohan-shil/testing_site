@@ -36,24 +36,24 @@
     *ngIf="activeModal === 'textBox'"
     (close)="closeModal()"
   ></app-text-box>
-  <app-text-box
+  <app-check-box
     *ngIf="activeModal === 'check-box'"
     (close)="closeModal()"
-  ></app-text-box>
-  <app-text-box
+  ></app-check-box>
+  <app-radio-box
     *ngIf="activeModal === 'radio-box'"
     (close)="closeModal()"
-  ></app-text-box>
-  <app-text-box
+  ></app-radio-box>
+  <app-table-box
     *ngIf="activeModal === 'table-box'"
     (close)="closeModal()"
-  ></app-text-box>
-  <app-text-box
+  ></app-table-box>
+  <app-buttons
     *ngIf="activeModal === 'buttons'"
     (close)="closeModal()"
-  ></app-text-box>
-  <app-text-box
+  ></app-buttons>
+  <app-links
     *ngIf="activeModal === 'links'"
     (close)="closeModal()"
-  ></app-text-box>
+  ></app-links>
 </div>
